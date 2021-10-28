@@ -4,7 +4,7 @@
       <!--Header-->
       <!--First Module-->
       <nav>
-        <div class="w-full h-12 bg-white">
+        <div class="w-full h-12 md:h-16 bg-white">
           <div class="grid grid-cols-2 md:grid-cols-3 lg:justify-around px-20 py-3">
               <div class="hidden md:block">
                 <div class="flex flew-row text-gray-400 font-sans">
@@ -107,19 +107,20 @@
         
         <div class="md:col-span-1 md:mx-3">
           <!--Profile-->
-          <div class="grid-rows-2 font-sans">
-            <div class="row-span-1 bg-white border border-gray-300 rounded-md">
+          <div class="md:grid-rows-1 lg:grid-rows-2 font-sans">
+            <div class="lg:row-span-1 bg-white border border-gray-300 rounded-md">
               <!--Imagens-->
               <div class="bg-gradient-to-r from-blue-400 to-blue-700 bg-cover h-16 rounded-md relative">
-                <a href="#"><img src="../assets/img/user2.jpg" alt="user2" class="h-20 w-20 ml-4 rounded-full absolute top-8"></a>
-                <div class="absolute ml-24 my-16"> 
-                  <div class="text-gray-600 font-bold">Lorem Ipsum</div> 
-                  <div class="text-gray-600 font-extralight -mt-2">@loremipsum</div>
+                <div class="flex justify-center lg:mr-10">
+                <div>
+                  <a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="md:h-12 md:w-12 lg:h-20 lg:w-20 md:ml-14 md:mt-10 lg:ml-2 lg:mt-5 rounded-full"></a>
+                </div>
+                <div class="text-gray-500 md:text-sm md:text-center font-bold mr-1 md:mt-24 lg:mt-16">Lorem Ipsum <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div></div>
                 </div>
               </div>
               
               <div class="mt-10">
-              <ul class="list-reset flex border-b text-gray-600">
+              <ul class="flex justify-center list-reset border-b text-gray-600">
                 <li class="text-center py-3 px-4">
                   <a href="#" class="hover:text-gray-300">
                     <div>Tweets</div>
@@ -140,7 +141,7 @@
                 </li>
               </ul>
               </div>
-              <input type="text" class="bg-gray-200 focus:bg-white h-8 px-4 mx-10 my-5 text-xs w-48 rounded-full " placeholder="Compose New Tweet">
+              <input type="text" class="bg-gray-200 focus:bg-white h-8 px-4 mx-10 my-5 md:mx-2 md:ml-2 text-xs w-48 md:w-36 rounded-full " placeholder="Compose New Tweet">
             </div>
 
             <!--Trends-->
@@ -165,7 +166,51 @@
         <!--Tweets-->
         <div class="md:col-span-2 md:mx-2 bg-white border border-gray-300 rounded-md">
           <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Tweets</div>
+          <!--Tweet - Style1 -->
+          <div class="border-b">
+            <a href="#"><img src="../assets/img/user1.jpg" alt="user1" class="h-20 w-20 mx-4 rounded-full float-left"></a>
+            <div>
+              <div class="text-gray-500 font-semibold">Lorem</div>
+              <div class="text-gray-400 font-extralight">@lorem__ <br></div>
+              <div class="text-gray-500 font-normal flex items-end mt-1 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi libero ducimus, incidunt alias, minus maxime fuga deserunt non optio delectus pariatur veniam eveniet. Quaerat, corrupti! Tempore eos soluta illum veritatis!</div>
+            </div>
+            <div class="flex justify-end">
+              <a href="#" class="px-14 md:pr-10 md:pt-6 text-gray-400 hover:text-gray-500">Expand</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/>
+              </svg>
+              Reply</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3" />  <path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3-3l3-3" /></svg>
+              Retweet</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" /></svg>
+              Favorite</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" />  <circle cx="19" cy="12" r="1" />  <circle cx="5" cy="12" r="1" /></svg>
+              More</a>
+            </div>
+          </div>
 
+          <!--Tweet - Style2-->
+          <div class="border-b mt-2">
+            <a href="#"><img src="../assets/img/user3.jpg" alt="user3" class="h-20 w-20 mx-4 rounded-full float-left"></a>
+            <div>
+              <div class="text-gray-500 font-semibold">Laudantium quod</div>
+              <div class="text-gray-400 font-extralight">@laudantium_quod <br></div>
+              <div class="text-gray-500 font-normal flex items-end mt-1 mb-4 mr-2"><img src="../assets/img/tweet1.jpg" alt="tweet1"></div>
+            </div>
+            <div class="flex justify-end">
+              <a href="#" class="px-14 md:pr-10 md:pt-6 text-gray-400 hover:text-gray-500">Expand</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/>
+              </svg>
+              Reply</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3" />  <path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3-3l3-3" /></svg>
+              Retweet</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" /></svg>
+              Favorite</a>
+              <a href="#" class="px-2 text-gray-400 hover:text-gray-500"><svg class="h-6 w-6 float-left"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" />  <circle cx="19" cy="12" r="1" />  <circle cx="5" cy="12" r="1" /></svg>
+              More</a>
+            </div>
+          </div>
           <!--API simulada-->
 
 
