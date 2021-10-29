@@ -4,7 +4,7 @@
       <!--Header-->
       <!--First Module-->
       <nav>
-        <div class="w-full h-12 md:h-16 bg-white">
+        <div class="w-full lg:h-12 md:h-16 bg-white">
           <div class="grid grid-cols-2 md:grid-cols-3 lg:justify-around px-20 py-3">
               <div class="hidden md:block">
                 <div class="flex flew-row text-gray-400 font-sans">
@@ -103,19 +103,17 @@
 
     <!--Body-->
     <div>
-      <div class="grid grid-cols-1 md:grid-cols-4 lg:justify-around px-20 py-3">
+      <div class="grid grid-cols-1 md:grid-cols-4 justify-around px-20 py-3">
         
         <div class="md:col-span-1 md:mx-3">
           <!--Profile-->
           <div class="md:grid-rows-1 lg:grid-rows-2 font-sans">
             <div class="lg:row-span-1 bg-white border border-gray-300 rounded-md">
               <!--Imagens-->
-              <div class="bg-gradient-to-r from-blue-400 to-blue-700 bg-cover h-16 rounded-md relative">
-                <div class="flex justify-center lg:mr-10">
-                <div>
-                  <a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="md:h-12 md:w-12 lg:h-20 lg:w-20 md:ml-14 md:mt-10 lg:ml-2 lg:mt-5 rounded-full"></a>
-                </div>
-                <div class="text-gray-500 md:text-sm md:text-center font-bold mr-1 md:mt-24 lg:mt-16">Lorem Ipsum <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div></div>
+              <div class="bg-gradient-to-r from-blue-400 to-blue-700 bg-cover h-16 rounded relative">
+                <div class="flex">
+                  <div class="w-1/3 flex justify-center"><a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="h-20 w-20 mt-5 ml-2"></a></div>
+                  <div class="w-2/3 inline-flex"><div class="text-gray-500 font-bold mt-16 mx-2">Lorem Ipsum <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div></div></div>
                 </div>
               </div>
               
@@ -222,30 +220,37 @@
             <div class="row-span-1 bg-white border border-gray-300 rounded-md">
               <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Who to Follow</div>
               <!--User (x) Follow-->
-              <div class="flex justify-between">
-                <div>
-                  <a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="h-20 w-20 ml-4 rounded-full"></a>
+              <div class="flex">
+                <div class="w-1/3">
+                  <a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="h-20 w-20 ml-4"></a>
                 </div>
-                <div class="text-gray-500 font-bold mr-1">Lorem Ipsum <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div></div> 
-                <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>
-              </div>
-              <div class="relative bottom-10 left-24">
-                <button class="text-blue-300 bg-white border border-blue-300 hover:border-blue-400 hover:text-blue-400 rounded-full px-4 ml-1">Follow</button>
+                <div class="w-2/3 flex lg:justify-between md:ml-4">
+                  <div class="text-gray-500 font-bold lg:ml-2">Lorem Ipsum 
+                    <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div>
+                    <button class="text-blue-300 bg-white border border-blue-300 hover:border-blue-400 hover:text-blue-400 rounded-full px-4 py-1">Follow</button>
+                  </div> 
+                  <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>
+                </div>
+                <div class="flex-col"></div>
               </div>
               
               <!--User (x) Follow-->
-              <div class="flex justify-between">
-                <div>
-                  <a href="#"><img src="../assets/img/user10.jpg" alt="user9" class="h-20 w-20 ml-4 rounded-full"></a>
+              <div class="flex mt-2 mb-2">
+                <div class="w-1/3">
+                  <a href="#"><img src="../assets/img/user10.jpg" alt="user10" class="h-20 w-20 ml-4"></a>
                 </div>
-                <div class="text-gray-500 font-bold mr-1">Lorem Ipsum <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div></div> 
-                <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>
-              </div>
-              <div class="relative bottom-10 left-24">
-                <button class="text-blue-300 bg-white border border-blue-300 hover:border-blue-400 hover:text-blue-400 rounded-full px-4 ml-1">Follow</button>
-              </div>              
+                <div class="w-2/3 flex lg:justify-between md:ml-4">
+                  <div class="text-gray-500 font-bold lg:ml-2">Lorem Ipsum 
+                    <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div>
+                    <button class="text-blue-300 bg-white border border-blue-300 hover:border-blue-400 hover:text-blue-400 rounded-full px-4 py-1">Follow</button>
+                  </div> 
+                  <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>
+                </div>
+                <div class="flex-col"></div>
+              </div>         
             </div>
 
+            <!--Footer-->
             <div class="row-span-2 mt-5 bg-white border border-gray-300 rounded-md text-gray-400">
               <div class="text-gray-300 font-extralight mx-4 hover:text-gray-400 ">
                 <p>&copy; 
