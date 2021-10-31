@@ -103,7 +103,7 @@
 
     <!--Body-->
     <div>
-      <div class="grid grid-cols-1 md:grid-cols-4 justify-around px-20 py-3">
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:justify-around lg:px-20 py-3">
         
         <div class="md:col-span-1 md:mx-3">
           <!--Profile-->
@@ -117,27 +117,25 @@
                 </div>
               </div>
               
-              <div class="mt-10">
-              <ul class="flex justify-center list-reset border-b text-gray-600">
-                <li class="text-center py-3 px-4">
+              <div class="flex justify-center text-gray-600 md:text-sm mt-10">
+                <div class="w-1/3 text-center py-3 lg:px-4">
                   <a href="#" class="hover:text-gray-300">
                     <div>Tweets</div>
-                    <div class="font-semibold">2021</div>
+                    <div class="font-semibold justify-items-center">2021</div>
                   </a>
-                </li>
-                <li class="text-center py-3 px-4">
+                </div>
+                <div class="w-1/3 text-center py-3 lg:px-4">
                   <a href="#" class="hover:text-gray-300">
                     <div>Followers</div>
-                    <div class="font-semibold">5000</div>
+                    <div class="font-semibold justify-items-center">5000</div>
                   </a>
-                </li>
-                <li class="text-center py-3 px-4">
+                </div>
+                <div class="w-1/3 text-center py-3 lg:px-4">
                   <a href="#" class="hover:text-gray-300">
                     <div>Following</div>
-                    <div class="font-semibold">1589</div>
+                    <div class="font-semibold justify-items-center">1995</div>
                   </a>
-                </li>
-              </ul>
+                </div>
               </div>
               <input type="text" class="bg-gray-200 focus:bg-white h-8 px-4 mx-10 my-5 md:mx-2 md:ml-2 text-xs w-48 md:w-36 rounded-full " placeholder="Compose New Tweet">
             </div>
@@ -162,7 +160,7 @@
         </div>
 
         <!--Tweets-->
-        <div class="md:col-span-2 md:mx-2 bg-white border border-gray-300 rounded-md">
+        <div class="md:col-span-2 bg-white border border-gray-300 rounded-md">
           <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Tweets</div>
           <!--Tweet - Style1 -->
          <div class="flex border-b">
@@ -214,7 +212,7 @@
             <div class="row-span-1 bg-white border border-gray-300 rounded-md">
               <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Who to Follow</div>
               <!--User (x) Follow-->
-              <div class="flex">
+              <div class="flex md:text-sm">
                 <div class="w-1/3">
                   <a href="#"><img src="../assets/img/user9.jpg" alt="user9" class="h-20 w-20 ml-4"></a>
                 </div>
@@ -228,7 +226,7 @@
               </div>
               
               <!--User (x) Follow-->
-              <div class="flex mt-2 mb-2">
+              <div class="flex mt-2 mb-2 md:text-sm">
                 <div class="w-1/3">
                   <a href="#"><img src="../assets/img/user10.jpg" alt="user10" class="h-20 w-20 ml-4"></a>
                 </div>
