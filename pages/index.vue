@@ -170,7 +170,7 @@
             <div class="w-3/4">
               <div class="text-gray-500 font-semibold">Lorem Ipsum</div>
               <div class="text-gray-400 font-extralight">@loremipsum</div>
-              <div class="text-gray-500 font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi libero ducimus, incidunt alias, minus maxime fuga deserunt non optio delectus pariatur veniam eveniet. Quaerat, corrupti! Tempore eos soluta illum veritatis!</div>
+              <div class="text-gray-500 font-normal"><p v-for="video in videos" :key="video.id"> {{ video.name }} </p></div>
               <div class="flex flex-row my-2">
                 <button class="text-gray-400 hover:text-gray-500 mr-5">Expand</button>
                 <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />  <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" /></svg>Reply</button>
@@ -265,7 +265,10 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
+  //mobile
   data() {
     return {
       isOpen: false
@@ -276,5 +279,20 @@ export default {
       this.isOpen = !this.isOpen
     }
   },
+
+  //server
+  name: 'videos',
+  data() {
+    return {
+      videos: [],
+    }
+  },
+
+  mounted() {
+    axios.get('/api/videos').then(res => {
+        this.videos = res.data
+    })
+  },
+
 }
 </script>
