@@ -163,14 +163,14 @@
         <div class="md:col-span-2 bg-white border border-gray-300 rounded-md">
           <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Tweets</div>
           <!--Tweet - Style1 -->
-         <div class="flex border-b">
+         <div class="flex border-b" v-for="tweet in tweets" :key="tweet.id">
             <div class="w-1/4 flex justify-center">
               <a href="#"><img src="../assets/img/user1.jpg" alt="user1" class="h-20 w-20 mx-4"></a>
             </div>
             <div class="w-3/4">
-              <div class="text-gray-500 font-semibold">Lorem Ipsum</div>
-              <div class="text-gray-400 font-extralight">@loremipsum</div>
-              <div class="text-gray-500 font-normal"><p v-for="video in videos" :key="video.id"> {{ video.name }} </p></div>
+              <div class="text-gray-500 font-semibold">{{ tweet.name }}</div>
+              <div class="text-gray-400 font-extralight">{{ tweet.user }} <br></div>
+              <div class="text-gray-500 font-normal">{{ tweet.post }}</div>
               <div class="flex flex-row my-2">
                 <button class="text-gray-400 hover:text-gray-500 mr-5">Expand</button>
                 <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />  <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" /></svg>Reply</button>
@@ -183,7 +183,7 @@
             </div>
           </div>
 
-          <!--Tweet - Style2-->
+          <!--Tweet - Style2
           <div class="flex border-b mt-2">
                 <div class="w-1/4 flex justify-center">
                   <a href="#"><img src="../assets/img/user3.jpg" alt="user3" class="h-20 w-20 mx-4"></a>
@@ -203,7 +203,7 @@
                     <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" />  <circle cx="5" cy="12" r="1" /></svg>More</button>
                   </div>
                 </div>
-              </div>
+              </div> -->
         </div>
 
         <!--Who to Follow-->
@@ -281,16 +281,16 @@ export default {
   },
 
   //server
-  name: 'videos',
+  name: 'tweets',
   data() {
     return {
-      videos: [],
+      tweets: [],
     }
   },
 
   mounted() {
-    axios.get('/api/videos').then(res => {
-        this.videos = res.data
+    axios.get('/api/tweets').then(res => {
+        this.tweets = res.data
     })
   },
 
