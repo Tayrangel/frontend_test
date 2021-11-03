@@ -183,6 +183,26 @@
             </div>
           </div>
 
+          <!--Tweet - Style2 favorita sem server-->
+           <div class="flex border-b">
+            <div class="w-1/4 flex justify-center">
+              <a href="#"><img src="../assets/img/user1.jpg" alt="user1" class="h-20 w-20 mx-4"></a>
+            </div>
+            <div class="w-3/4">
+              <div class="text-gray-500 font-semibold">Lorem Ipsum</div>
+              <div class="text-gray-400 font-extralight">@loremipsum</div>
+              <div class="text-gray-500 font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi libero ducimus, incidunt alias, minus maxime fuga deserunt non optio delectus pariatur veniam eveniet. Quaerat, corrupti! Tempore eos soluta illum veritatis!</div>
+              <div class="flex flex-row my-2">
+                <button class="text-gray-400 hover:text-gray-500 mr-5">Expand</button>
+                <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />  <path d="M13 19.95a8 8 0 0 0 5.3 -12.8" stroke-dasharray=".001 4.13" /></svg>Reply</button>
+                <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Retweet</button>
+                <button @click="toggle" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-300 focus:outline-none mx-1">
+                  <svg :class="[isOpen ? 'hidden' : 'block', 'h-6 w-6']"   width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" /></svg>
+                  <svg :class="[isOpen ? 'block' : 'hidden', 'h-6 w-6 text-red-500']" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" /></svg> Favorite</button>
+                <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" />  <circle cx="5" cy="12" r="1" /></svg>More</button>
+              </div>
+            </div>
+          </div>
           
         </div>
 
@@ -261,7 +281,7 @@ export default {
   },
 
   //server
-  name: 'tweets',
+  /*name: 'tweets',
   data() {
     return {
       tweets: [],
@@ -272,7 +292,7 @@ export default {
     axios.get('/api/tweets').then(res => {
         this.tweets = res.data
     })
-  },
+  },*/
 
 }
 </script>
