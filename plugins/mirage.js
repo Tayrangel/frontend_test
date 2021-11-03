@@ -16,22 +16,19 @@ new Server({
             },
 
             user() {
-                return faker.fake('{{lorem.word(10)}}')
+                return faker.fake('{{name.firstName}}')
             },
 
             post() {
                 return faker.fake('{{lorem.sentence}}')
             },
-
-            img() {
-                return faker.fake('{{image.image}}')
-            },
+            
         })
     },
 
     seeds(server) {
-        server.createList('tweet', 10)
-        /*server.create('tweet', {name: 'Lorem2', user:'@lorem2', post: 'Lorem Ipsum, testando como vou fazer varios tweets, porque quando cria, copia tudo'},)*/
+        server.createList('tweet', 3)
+    
     },
 
     routes() {
