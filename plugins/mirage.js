@@ -1,8 +1,10 @@
 import { Server, Model, JSONAPISerializer, Factory } from 'miragejs';
-import faker from 'faker'
+import faker, { image } from 'faker'
 new Server({
     models: {
-        tweet: Model
+        tweet: Model,
+        follow: Model,
+        simple: Model,
     },
 
     serializers: {
@@ -10,7 +12,11 @@ new Server({
     },
     
     factories: {
-        tweet: Factory.extend({
+        simple: Factory.extend({
+            avatar() {
+                return faker.fake('{{image.avatar}}')
+            },
+
             name() {
                 return faker.fake('{{name.findName}}')
             },
@@ -22,12 +28,50 @@ new Server({
             post() {
                 return faker.fake('{{lorem.sentence}}')
             },
+        }),
+
+        tweet: Factory.extend({
+            avatar() {
+                return faker.fake('{{image.avatar}}')
+            },
+    
+            name() {
+                return faker.fake('{{name.findName}}')
+            },
+    
+            user() {
+                return faker.fake('{{name.firstName}}')
+            },
+    
+            post() {
+                return faker.fake('{{lorem.sentence}}')
+            },
+                
+            image() {
+                return faker.fake('{{image.nature}}')
+            },
+        }),
+
+        follow: Factory.extend ({
+            avatar() {
+                return faker.fake('{{image.avatar}}')
+            },
+
+            name() {
+                return faker.fake('{{name.findName}}')
+            },
+
+            user() {
+                return faker.fake('{{name.firstName}}')
+            }
             
         })
     },
 
     seeds(server) {
-        server.createList('tweet', 3)
+        server.createList('simple', 3),
+        server.createList('tweet', 4),
+        server.createList('follow', 2)
     
     },
 
@@ -35,6 +79,8 @@ new Server({
         this.namespace = 'api';
         this.urlPrefix = 'http://localhost:3000'
 
-        this.get('/tweets', schema => schema.db.tweets)
+        this.get('/simples', schema => schema.db.simples);
+        this.get('/tweets', schema => schema.db.tweets);
+        this.get('/follows', schema => schema.db.follows);
     },
 })
