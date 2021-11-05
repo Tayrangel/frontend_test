@@ -82,5 +82,17 @@ new Server({
         this.get('/simples', schema => schema.db.simples);
         this.get('/tweets', schema => schema.db.tweets);
         this.get('/follows', schema => schema.db.follows);
+
+        /*
+        this.get('/simples', (schema, request) => {
+            return schema.simples.all();
+        });
+
+        this.get('/simples', (schema, request) => {
+            let attrs = JSON.parse(request.requestBody);
+            return schema.simples.create(attrs);
+        });*/
+
+        
     },
 })

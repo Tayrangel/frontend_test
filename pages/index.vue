@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200">
+  <div class="bg-green-900 bg-opacity-25">
     <!--Header-->
     <div>
       <Navbar/>
@@ -11,13 +11,15 @@
       <div class="md:col-span-1 md:mx-3">
           <div class="md:grid-rows-1 lg:grid-rows-2 font-sans">
             <Dashboard/>
-            <Trends/>
+            <div class="my-5">
+              <Trends/>
+            </div>
           </div>
       </div>
 
       <!--Second Col-->
-      <div class="md:col-span-2 bg-white border border-gray-300 rounded-md">
-        <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Tweets</div>
+      <div class="md:col-span-2 bg-white border border-gray-300 rounded-md mb-5">
+        <div class="font-semibold text-2xl text-gray-500 border-b pl-4 mb-2">Tweets</div>
         <!--Tweet - Style1 -->
         <div class="flex border-b mt-2" v-for="simple in simples" :key="simple.id">
           <div class="w-1/4 flex justify-center">
@@ -25,13 +27,13 @@
           </div>
           <div class="w-3/4">
             <div class="text-gray-500 font-semibold">{{ simple.name }}</div>
-            <div class="text-gray-400 font-extralight">@{{ simple.user }} <br></div>
+            <div class="text-gray-400 font-extralight -mt-2">@{{ simple.user }} <br></div>
             <div class="text-gray-500 font-normal">{{ simple.post }}</div>
             <BtnTweet/>
           </div>
         </div>
         <!--Tweet - Style2-->
-        <div class="flex border-b mt-2" v-for="tweet in tweets" :key="tweet.id">
+        <div class="flex border-b mt-2" v-for="tweet in tweets" :key="'a' + tweet.id">
           <div class="w-1/4 flex justify-center">
             <img :src="tweet.avatar" class="h-24 w-24 pr-4">
           </div>
@@ -54,12 +56,12 @@
             <!--User (x) Follow-->
             <div class="flex md:text-sm my-2" v-for="follow in follows" :key="follow.id">
               <div class="w-1/3">
-                <img :src="follow.avatar" class="h-20 w-20 ml-4">
+                <img :src="follow.avatar" class="h-20 w-20 ml-4 md:ml-2">
               </div>
               <div class="w-2/3 flex lg:justify-between md:ml-4">
                 <div class="text-gray-500 font-bold lg:ml-2">{{ follow.name }}
-                  <div class="text-gray-400 font-extralight -mt-2">@{{ follow.user }}</div>
-                  <button class="text-blue-300 bg-white border border-blue-300 hover:border-blue-400 hover:text-blue-400 rounded-full px-4 py-1">Follow</button>
+                  <div class="text-gray-400 font-extralight -mt-1">@{{ follow.user }}</div>
+                  <button class="text-green-300 bg-white border border-green-300 hover:border-green-400 hover:text-green-400 rounded px-4 py-1">Follow</button>
                 </div> 
                 <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>
               </div>

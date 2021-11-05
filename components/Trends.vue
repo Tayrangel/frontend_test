@@ -1,7 +1,7 @@
 <!--Trends-->
 
 <template>
-<div class="row-span-2 mt-5 bg-white border border-gray-300 rounded-md text-gray-400">
+<div class="row-span-2 bg-white border border-gray-300 rounded-md text-gray-400">
     <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Trends</div>
     <ul class="font-light text-base ml-4">
         <li><a href="#" class="hover:text-gray-300">#Frontend_Test</a></li>
