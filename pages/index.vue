@@ -21,7 +21,7 @@
       <div class="md:col-span-2 bg-white border border-gray-300 rounded-md mb-5">
         <div class="font-semibold text-2xl text-gray-500 border-b pl-4 mb-2">Tweets</div>
         <!--Tweet - Style1 -->
-        <div class="flex border-b mt-2" v-for="tweet in tweets" :key="tweet.id">
+        <div class="flex border-b mt-2" data-testid="tweet" v-for="tweet in tweets" :key="tweet.id">
           <div class="w-1/4 flex justify-center">
             <img :src="tweet.avatar" class="h-24 w-24 pr-4">
           </div>

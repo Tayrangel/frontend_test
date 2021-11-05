@@ -38,5 +38,9 @@ export default {
   },
 
   build: {
+  },
+
+  pwa: {
+    icon: 'static/icon.png'
   }
 }
