@@ -21,14 +21,14 @@
       <div class="md:col-span-2 bg-white border border-gray-300 rounded-md mb-5">
         <div class="font-semibold text-2xl text-gray-500 border-b pl-4 mb-2">Tweets</div>
         <!--Tweet - Style1 -->
-        <div class="flex border-b mt-2" v-for="simple in simples" :key="simple.id">
+        <div class="flex border-b mt-2" v-for="tweet in tweets" :key="tweet.id">
           <div class="w-1/4 flex justify-center">
-            <img :src="simple.avatar" class="h-24 w-24 pr-4">
+            <img :src="tweet.avatar" class="h-24 w-24 pr-4">
           </div>
           <div class="w-3/4">
-            <div class="text-gray-500 font-semibold">{{ simple.name }}</div>
-            <div class="text-gray-400 font-extralight -mt-2">@{{ simple.user }} <br></div>
-            <div class="text-gray-500 font-normal">{{ simple.post }}</div>
+            <div class="text-gray-500 font-semibold">{{ tweet.name }}</div>
+            <div class="text-gray-400 font-extralight -mt-2">@{{ tweet.user }} <br></div>
+            <div class="text-gray-500 font-normal">{{ tweet.post }}</div>
             <BtnTweet/>
           </div>
         </div>
@@ -84,23 +84,17 @@ import axios from 'axios'
 
 export default {
   //server
-  name: 'simples',
   name: 'tweets',
   name: 'follows',
   
   data() {
     return {
-      simples: [],
       tweets: [],
       follows: []
     }
   },
 
   mounted() {
-    axios.get('/api/simples').then(res => {
-        this.simples = res.data
-    }),
-
     axios.get('/api/tweets').then(res => {
         this.tweets = res.data
     }),

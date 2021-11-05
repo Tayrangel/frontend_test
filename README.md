@@ -1,7 +1,18 @@
 ### FrontEnd Test
-Consiste na implementação de interface responsiva com NuxtJS, TailwindCSS e MirageJS.
+O front-end teste consiste na implementação de interface responsiva, baseada em um wireframe. Desenvolvida com as tecnologias NuxtJS, TailwindCSS e MirageJS. 
 
+#### Objetivo
+Os objetivos determinados no desenvolvimento deste projeto são: 
+* Criação de API simulada para geração de Tweets;
+* Favoritar tweet disponibilizado pela API simulada.
 
+##### Diretório
+Alguns diretórios extras foram criados e/ou utilizados, para melhor experiência no desenvolvimento do projeto, e melhorar as funcionalidades que são atribuidas ao diretório principal `pages`
+
+* assets
+* components
+* plugins
+* src
 <!-- ## Build Setup
 
 ```bash

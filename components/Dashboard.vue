@@ -4,12 +4,12 @@
         <div class="bg-gradient-to-r from-green-400 to-green-700 bg-cover h-16 rounded relative">
             <div class="flex">
                 <div class="w-1/3 flex justify-center">
-                <nuxt-link :to="`profile`">
+                <nuxt-link :to="`me`">
                 <img src="../assets/img/user2.jpg" alt="user9" class="h-20 w-20 mt-5 ml-2">
                 </nuxt-link>
                 </div>
                 <div class="w-2/3 inline-flex">
-                    <nuxt-link :to="`profile`">
+                    <nuxt-link :to="`me`">
                     <div class="text-gray-500 font-bold mt-16 mx-2" >Lorem Ipsum 
                         <div class="text-gray-400 font-extralight -mt-2">@loremipsum</div>
                     </div>

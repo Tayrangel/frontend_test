@@ -25,7 +25,7 @@
                     Discover
                   </a>
 
-                  <nuxt-link :to="`profile`" class="px-1 hover:text-gray-300">
+                  <nuxt-link :to="`me`" class="px-1 hover:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="float-left h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
@@ -83,7 +83,7 @@
             <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-900 text-opacity-50 hover:text-white hover:bg-green-900 hover:bg-opacity-75 focus:outline-none focus:text-white focus:bg-green-900">
               Discover
             </a>
-            <nuxt-link :to="`profile`" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-900 text-opacity-50 hover:text-white hover:bg-green-900 hover:bg-opacity-75 focus:outline-none focus:text-white focus:bg-green-900" >
+            <nuxt-link :to="`me`" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-900 text-opacity-50 hover:text-white hover:bg-green-900 hover:bg-opacity-75 focus:outline-none focus:text-white focus:bg-green-900" >
               Me
             </nuxt-link>
             <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-green-900 text-opacity-50 hover:text-white hover:bg-green-900 hover:bg-opacity-75 focus:outline-none focus:text-white focus:bg-green-900">
