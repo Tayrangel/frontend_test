@@ -1,5 +1,4 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'frontend_test',
     htmlAttrs: {
@@ -20,6 +19,7 @@ export default {
   ],
 
   plugins: [
+    '~/plugins/mirage'
   ],
 
   components: true,
@@ -30,7 +30,12 @@ export default {
   ],
 
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseURL: 'http://localhost:3000/api',
+  },
 
   build: {
   }
