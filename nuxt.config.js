@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'frontend_test',
+    title: 'Twitter App',
     htmlAttrs: {
       lang: 'en'
     },
@@ -41,6 +41,22 @@ export default {
   },
 
   pwa: {
-    icon: 'static/icon.png'
+    icon: {
+    source: 'static/icon.png',
+    fileName: 'icon.png',
+    sizes: [64, 120, 144, 152, 192, 384, 512],
+    },
+
+    meta: {
+      title: 'Twitter',
+      author: 'Tayhana Fonseca',
+    },
+
+    manifest: {
+      name: 'Twitter App',
+      short_name: 'Twitter',
+      lang: 'en',
+      description: 'Teste frontend de implementação de interface responsiva baseada no Twitter.',
+    },
   }
 }
