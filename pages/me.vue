@@ -101,16 +101,16 @@
                         <div class="font-semibold text-2xl text-gray-500 pl-4 mb-2 border-b">Who to Follow</div>
 
                         <!--User (x) Follow-->
-                        <div class="flex md:text-sm my-2" v-for="follow in follows" :key="follow.id">
+                        <div class="flex xl:flex-row lg:flex-col md:flex-col md:items-center my-2" v-for="follow in follows" :key="follow.id">
                             <div class="w-1/3">
                                 <nuxt-link :to="`/profile/_id`">
                                 <img :src="follow.avatar" class="h-20 w-20 ml-4 md:ml-2">
                                 </nuxt-link>
                             </div>
                             <div class="w-2/3 flex lg:justify-between md:ml-4">
-                                <div class="text-gray-500 font-bold lg:ml-2">{{ follow.name }}
+                                <div class="text-gray-500 font-bold md:text-center lg:ml-2">{{ follow.name }}
                                 <nuxt-link :to="`/profile/_id`">
-                                <div class="text-gray-400 font-extralight -mt-1">@{{ follow.user }}</div></nuxt-link>
+                                <div class="text-gray-400 font-extralight md:text-center -mt-1">@{{ follow.user }}</div></nuxt-link>
                                 <button class="text-green-300 bg-white border border-green-300 hover:border-green-400 hover:text-green-400 rounded px-4 py-1">Follow</button>
                                 </div> 
                                 <div class="mr-10 mt-1"><svg class="h-4 w-4 text-gray-400 hover:text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></div>

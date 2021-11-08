@@ -14,6 +14,8 @@ Os objetivos determinados no desenvolvimento deste projeto são:
 2. Clone(fork) o repositório no [GitHub](https://github.com/Tayrangel/frontend_test) 
 3. Inicie o servidor de desenvolvimento usando `npm run dev`
 
+_Indica-se a utilização do navegador Google Chrome_
+
 #### Diretório
 Alguns diretórios extras foram criados e/ou utilizados, para melhor experiência no desenvolvimento do projeto, e melhorar as funcionalidades que são atribuidas ao diretório principal `pages`
 

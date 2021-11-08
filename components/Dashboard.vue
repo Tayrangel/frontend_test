@@ -18,7 +18,7 @@
             </div>
         </div>
               
-        <div class="flex lg:flex-row md:flex-col justify-center md:items-center text-gray-600 mt-10 md:mt-12 py-3">
+        <div class="flex xl:flex-row lg:flex-col md:flex-col justify-center md:items-center text-gray-600 mt-10 md:mt-12 py-3">
             <div class="w-1/3 text-center">
                 <a href="#" class="hover:text-gray-300">
                     <div>Tweets</div>
