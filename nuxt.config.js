@@ -1,7 +1,6 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'frontend_test',
+    title: 'Twitter App',
     htmlAttrs: {
       lang: 'en'
     },
@@ -20,6 +19,7 @@ export default {
   ],
 
   plugins: [
+    '~/plugins/mirage'
   ],
 
   components: true,
@@ -30,8 +30,33 @@ export default {
   ],
 
   modules: [
+    '@nuxtjs/axios',
   ],
 
+  axios: {
+    baseURL: 'http://localhost:3000/api',
+  },
+
   build: {
+  },
+
+  pwa: {
+    icon: {
+    source: 'static/icon.png',
+    fileName: 'icon.png',
+    sizes: [64, 120, 144, 152, 192, 384, 512],
+    },
+
+    meta: {
+      title: 'Twitter',
+      author: 'Tayhana Fonseca',
+    },
+
+    manifest: {
+      name: 'Twitter App',
+      short_name: 'Twitter',
+      lang: 'en',
+      description: 'Teste frontend de implementação de interface responsiva baseada no Twitter.',
+    },
   }
 }

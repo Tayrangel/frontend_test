@@ -1,71 +1,39 @@
-### FrontEnd Test
-Consiste na implementação de interface responsiva com NuxtJS, TailwindCSS e MirageJS.
+## FrontEnd Test
+O front-end teste consiste na implementação de interface responsiva, baseada em um wireframe. Desenvolvida com as tecnologias NuxtJS, TailwindCSS e MirageJS. 
 
+### Objetivo
+Os objetivos determinados no desenvolvimento deste projeto são: 
+* Criação de API simulada para geração de Tweets;
+* Favoritar tweet disponibilizado pela API simulada;
+* Design criativo;
+* PWA; e
+* Perfil do usuário (Me).
 
-<!-- ## Build Setup
+#### Configuração 
+. Tenha instalado em seu computador a versão atual do Node.JS
+. Clone(fork) o repositório no [GitHub]: (https://github.com/Tayrangel/frontend_test) 
+. Inicie o servidor de desenvolvimento usando `npm run dev`
 
-```bash
-# install dependencies
-$ npm install
+##### Diretório
+Alguns diretórios extras foram criados e/ou utilizados, para melhor experiência no desenvolvimento do projeto, e melhorar as funcionalidades que são atribuidas ao diretório principal `pages`
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+* assets
+* components
+* plugins
+* src
+* static
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+###### Assets
+O diretório `assets` contém o ativo não compilado: imagem.
 
-# generate static project
-$ npm run generate
-```
+###### Components
+O diretório de `components` contém os componentes Vue.js, que constituem as diferentes partes das página, sendo importados. Assim, os componentes auxiliam na construção dos layouts e até mesmo outros componentes.
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+###### Pages
+O diretório `pages` diretório contém as visualizações e rotas do aplicativo Nuxt e lê todos os arquivos `* .vue` dentro do diretório, além de configurar o Vue Router automaticamente.
 
-## Special Directories
+###### Plugins
+O diretório de `plugins` contém plug-ins JavaScript que executa antes de instanciar o aplicativo raiz `Vue.js` e está configurado no arquivo `nuxt.config.js`.
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store). -->
+###### Static
+O diretório `static` contém os arquivos estáticos mapeados para o `/`. Além disso, está vinculado ao _Progressive Web App_ (PWA)
