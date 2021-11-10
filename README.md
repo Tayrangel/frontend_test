@@ -32,7 +32,7 @@ O diretório `assets` contém o ativo não compilado: imagem.
 O diretório de `components` contém os componentes Vue.js, que constituem as diferentes partes das página, sendo importados. Assim, os componentes auxiliam na construção dos layouts e até mesmo outros componentes.
 
 ##### Pages
-O diretório `pages` diretório contém as visualizações e rotas do aplicativo Nuxt e lê todos os arquivos `* .vue` dentro do diretório, além de configurar o Vue Router automaticamente.
+O diretório `pages` contém as visualizações e rotas do aplicativo Nuxt e lê todos os arquivos `* .vue` dentro do diretório, além de configurar o Vue Router automaticamente.
 
 ##### Plugins
 O diretório de `plugins` contém plug-ins JavaScript que executa antes de instanciar o aplicativo raiz `Vue.js` e está configurado no arquivo `nuxt.config.js`.

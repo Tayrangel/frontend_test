@@ -4,9 +4,7 @@ import faker, { image } from 'faker'
 new Server({
     models: {
         tweet: Model,
-        follow: Model,
-        me: Model,
-        post: Model,
+        user: Model,
     },
 
     serializers: {
@@ -15,18 +13,6 @@ new Server({
     
     factories: {
         tweet: Factory.extend({
-            avatar() {
-                return faker.fake('{{image.avatar}}')
-            },
-    
-            name() {
-                return faker.fake('{{name.findName}}')
-            },
-    
-            user() {
-                return faker.fake('{{internet.userName}}')
-            },
-    
             post() {
                 return faker.fake('{{lorem.sentence}}')
             },
@@ -36,7 +22,7 @@ new Server({
             },
         }),
 
-        follow: Factory.extend ({
+        user: Factory.extend ({
             avatar() {
                 return faker.fake('{{image.avatar}}')
             },
@@ -47,11 +33,8 @@ new Server({
 
             user() {
                 return faker.fake('{{internet.userName}}')
-            }
-            
-        }),
+            },
 
-        me: Factory.extend ({
             city() {
                 return faker.fake('{{address.city}}|{{address.stateAbbr}}')
             },
@@ -62,25 +45,15 @@ new Server({
 
             link() {
                 return faker.fake('{{internet.url}}')
-            }
-        }),
-
-        post: Factory.extend ({
-            post() {
-                return faker.fake('{{lorem.sentence}}')
             },
             
-            image() {
-                return faker.fake('{{image.nature}}')
-            }
         }),
     },
 
     seeds(server) {
-        server.createList('tweet', 4),
-        server.createList('follow', 2),
-        server.create('me', 1),
-        server.createList('post', 3)
+        server.create('tweet'),
+        server.createList('user', 4),
+        server.create('user')
     },
 
     routes() {
@@ -88,8 +61,6 @@ new Server({
         this.urlPrefix = 'http://localhost:3000'
 
         this.get('/tweets', schema => schema.db.tweets);
-        this.get('/follows', schema => schema.db.follows);
-        this.get('/mes', schema => schema.db.mes);
-        this.get('/posts', schema => schema.db.posts);
+        this.get('/users', schema => schema.db.users);
     },
 })

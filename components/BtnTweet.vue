@@ -12,12 +12,6 @@
       <button class="text-gray-400 hover:text-gray-500 mx-1"><svg class="h-6 w-6 float-left"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" />  <circle cx="5" cy="12" r="1" /></svg></button>
     </div>    
   </div>
-
-    <!--
-       <div class="tooltip">Hover over me
-          <span class="tooltiptext">Tooltip text</span>
-        </div>
-    -->
 </template>
 
 <script>
@@ -35,33 +29,3 @@ export default {
   },
 }
 </script>
-
-<!--
-<style>
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: white;
-  color: gray;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  top: -10%;
-  right: 3%;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-</style> -->
