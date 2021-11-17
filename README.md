@@ -1,5 +1,5 @@
-## FrontEnd Test
-O front-end teste consiste na implementação de interface responsiva, baseada em um wireframe. Desenvolvida com as tecnologias NuxtJS, TailwindCSS e MirageJS. 
+## Twitter
+O projeto consiste na implementação de interface responsiva, baseada em um wire frame, do Twitter. Desenvolvida com as tecnologias NuxtJS, TailwindCSS e MirageJS.
 
 ### Objetivo
 Os objetivos determinados no desenvolvimento deste projeto são: 
